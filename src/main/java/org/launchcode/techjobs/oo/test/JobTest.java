@@ -43,5 +43,22 @@ public class JobTest {
 
     }
 
+    @Test
+    public boolean testJobsForEquality() {
+        Job jobFour = new Job("Product tester",
+                new Employer("ACME"),
+                new Location("Desert"),
+                new PositionType("Quality control"),
+                new CoreCompetency("Persistence"));
+        Job jobFive = new Job("Product tester",
+                new Employer("ACME"),
+                new Location("Desert"),
+                new PositionType("Quality control"),
+                new CoreCompetency("Persistence"));
+
+        assertEquals(jobFour, jobFive);
+        return false;
+    }
+
 }
 
